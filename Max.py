@@ -187,14 +187,14 @@ def backupData():
 
 def helpmessage():
     helpMessage = "╔══[☢ 🇹🇭⍣ᎢᎬᎪᎷᏴᎾᎢ⅌ᎷᎫ⍣🇹🇭 ☢]" + "\n" + \
-                  "╠ Help" + "\n" + \
-                  "╠ Translate" + "\n" + \
-                  "╠ TextToSpeech" + "\n" + \
+                  "╠ คำสั่ง" + "\n" + \
+                  "╠ คำสั่ง2" + "\n" + \
+                  "╠ คำสั่ง3" + "\n" + \
                   "╠══[ Status Command ]" + "\n" + \
-                  "╠ Restart" + "\n" + \
+                  "╠ รีบอท" + "\n" + \
                   "╠ Runtime" + "\n" + \
-                  "╠ Speed" + "\n" + \
-                  "╠ Status" + "\n" + \
+                  "╠ sp" + "\n" + \
+                  "╠ เช็ค ={เช็คการตั้งค่า" + "\n" + \
                   "╠ About" + "\n" + \
                   "╠══[ Settings Command ]" + "\n" + \
                   "╠ AutoAdd「On/Off」" + "\n" + \
@@ -430,7 +430,7 @@ def lineBot(op):
         if op.type == 5:
             print ("[ 5 ] NOTIFIED ADD CONTACT")
             if settings["autoAdd"] == True:
-                line.sendMessage(op.param1, "แอดมาทำไม:D".format(str(line.getContact(op.param1).displayName)))
+                line.sendMessage(op.param1, "💥แอดมาทำไม มีใจเด้งแชท:D".format(str(line.getContact(op.param1).displayName)))
         if op.type == 13:
             print ("[ 13 ] NOTIFIED INVITE GROUP")
             group = line.getGroup(op.param1)
@@ -458,24 +458,24 @@ def lineBot(op):
                 if text is None:
                     return
 #==============================================================================#
-                if text.lower() == 'help':
+                if text.lower() == 'คำสั่ง':
                     helpMessage = helpmessage()
                     line.sendMessage(to, str(helpMessage))
                     line.sendContact(to, "u283825ccd9c7b996bbe31c312a80489c")
-                elif text.lower() == 'texttospeech':
+                elif text.lower() == 'คำสั่ง2':
                     helpTextToSpeech = helptexttospeech()
                     line.sendMessage(to, str(helpTextToSpeech))
-                elif text.lower() == 'translate':
+                elif text.lower() == 'คำสั่ง3':
                     helpTranslate = helptranslate()
                     line.sendMessage(to, str(helpTranslate))
 #==============================================================================#
-                elif text.lower() == 'speed':
+                elif text.lower() == 'sp':
                     start = time.time()
                     line.sendMessage(to, "☢ 🇹🇭⍣ᎢᎬᎪᎷᏴᎾᎢ⅌ᎷᎫ⍣🇹🇭 ☢")
                     elapsed_time = time.time() - start
                     line.sendMessage(to,format(str(elapsed_time)))
-                elif text.lower() == 'restart':
-                    line.sendMessage(to, "Please....")
+                elif text.lower() == 'รีบอท':
+                    line.sendMessage(to, "กดลิ้งใหม่....")
                     restartBot()
                 elif text.lower() == 'runtime':
                     timeNow = time.time()
@@ -504,11 +504,11 @@ def lineBot(op):
                     except Exception as e:
                         line.sendMessage(msg.to, str(e))
 #==============================================================================#
-                elif text.lower() == 'status':
+                elif text.lower() == 'เช็ค':
                     try:
-                        ret_ = "╔══[ Status ]"
-                        if settings["autoAdd"] == True: ret_ += "\n╠ Auto Add ✅"
-                        else: ret_ += "\n╠ Auto Add ❌"
+                        ret_ = "╔══[ เช็กการตั้งค่า ]"
+                        if settings["autoAdd"] == True: ret_ += "\n╠ เพิ่มอัตโนมัติ ✅"
+                        else: ret_ += "\n╠ เพิ่มอัตโนมัติ ❌"
                         if settings["autoJoin"] == True: ret_ += "\n╠ Auto Join ✅"
                         else: ret_ += "\n╠ Auto Join ❌"
                         if settings["autoLeave"] == True: ret_ += "\n╠ Auto Leave ✅"
