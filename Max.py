@@ -186,7 +186,7 @@ def backupData():
         return False
 
 def helpmessage():
-    helpMessage = "╔══[☢ ŦΣÄM ƉØÑØVÄÑ ☢]" + "\n" + \
+    helpMessage = "╔══[☢ 🇹🇭⍣ᎢᎬᎪᎷᏴᎾᎢ⅌ᎷᎫ⍣🇹🇭 ☢]" + "\n" + \
                   "╠ Help" + "\n" + \
                   "╠ Translate" + "\n" + \
                   "╠ TextToSpeech" + "\n" + \
@@ -248,11 +248,11 @@ def helpmessage():
                   "╠ SearchLyric「Search」" + "\n" + \
                   "╠ SearchImage「Search」" + "\n" + \
                   "╠ ScreenshootWebsite「LinkURL」" + "\n" + \
-                  "╚══[☢ ŦΣÄM ƉØÑØVÄÑ ☢]"
+                  "╚══[☢ 🇹🇭⍣ᎢᎬᎪᎷᏴᎾᎢ⅌ᎷᎫ⍣🇹🇭 ☢]"
     return helpMessage
     
 def helptexttospeech():
-    helpTextToSpeech =   "╔══[☢ ŦΣÄM ƉØÑØVÄÑ ☢]" + "\n" + \
+    helpTextToSpeech =   "╔══[☢ 🇹🇭⍣ᎢᎬᎪᎷᏴᎾᎢ⅌ᎷᎫ⍣🇹🇭 ☢]" + "\n" + \
                          "╠ af : Afrikaans" + "\n" + \
                          "╠ sq : Albanian" + "\n" + \
                          "╠ ar : Arabic" + "\n" + \
@@ -471,7 +471,7 @@ def lineBot(op):
 #==============================================================================#
                 elif text.lower() == 'speed':
                     start = time.time()
-                    line.sendMessage(to, "☢ ŦΣÄM ƉØÑØVÄÑ ☢")
+                    line.sendMessage(to, "☢ 🇹🇭⍣ᎢᎬᎪᎷᏴᎾᎢ⅌ᎷᎫ⍣🇹🇭 ☢")
                     elapsed_time = time.time() - start
                     line.sendMessage(to,format(str(elapsed_time)))
                 elif text.lower() == 'restart':
