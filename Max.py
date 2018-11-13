@@ -190,20 +190,20 @@ def helpmessage():
                   "╠ คำสั่ง" + "\n" + \
                   "╠ คำสั่ง2" + "\n" + \
                   "╠ คำสั่ง3" + "\n" + \
-                  "╠══[ Status Command ]" + "\n" + \
+                  "╠══[ 🐯คำสั่งสถานะ🐯 ]" + "\n" + \
                   "╠ รีบอท" + "\n" + \
-                  "╠ Runtime" + "\n" + \
+                  "╠ ออน" + "\n" + \
                   "╠ sp" + "\n" + \
                   "╠ เช็ค ={เช็คการตั้งค่า" + "\n" + \
-                  "╠ About" + "\n" + \
-                  "╠══[ Settings Command ]" + "\n" + \
+                  "╠ ผส" + "\n" + \
+                  "╠══[ 🌟คำสั่งการตั้งค่า🌟 ]" + "\n" + \
                   "╠ AutoAdd「On/Off」" + "\n" + \
                   "╠ AutoJoin「On/Off」" + "\n" + \
                   "╠ AutoLeave「On/Off」" + "\n" + \
                   "╠ AutoRead「On/Off」" + "\n" + \
                   "╠ CheckSticker「On/Off」" + "\n" + \
                   "╠ DetectMention「On/Off」" + "\n" + \
-                  "╠══[ Self Command ]" + "\n" + \
+                  "╠══[ 📚คำสั่งเซล📚 ]" + "\n" + \
                   "╠ Me" + "\n" + \
                   "╠ MyMid" + "\n" + \
                   "╠ MyName" + "\n" + \
@@ -220,7 +220,7 @@ def helpmessage():
                   "╠ StealCover「Mention」" + "\n" + \
                   "╠ CloneProfile「Mention」" + "\n" + \
                   "╠ RestoreProfile" + "\n" + \
-                  "╠══[ Group Command ]" + "\n" + \
+                  "╠══[ 📱คำสั่งกลุ่ม📱 ]" + "\n" + \
                   "╠ GroupCreator" + "\n" + \
                   "╠ GroupId" + "\n" + \
                   "╠ GroupName" + "\n" + \
@@ -230,7 +230,7 @@ def helpmessage():
                   "╠ GroupList" + "\n" + \
                   "╠ GroupMemberList" + "\n" + \
                   "╠ GroupInfo" + "\n" + \
-                  "╠══[ Special Command ]" + "\n" + \
+                  "╠══[ 📲คำสั่งพิเศษ📲 ]" + "\n" + \
                   "╠ Mimic「On/Off」" + "\n" + \
                   "╠ MimicList" + "\n" + \
                   "╠ MimicAdd「Mention」" + "\n" + \
@@ -238,7 +238,7 @@ def helpmessage():
                   "╠ Mention" + "\n" + \
                   "╠ Lurking「On/Off/Reset」" + "\n" + \
                   "╠ Lurking" + "\n" + \
-                  "╠══[ Media Command ]" + "\n" + \
+                  "╠══[ 📡คำสั่งสื่อ📡 ]" + "\n" + \
                   "╠ Kalender" + "\n" + \
                   "╠ CheckDate「Date」" + "\n" + \
                   "╠ InstagramInfo「UserName」" + "\n" + \
@@ -461,7 +461,7 @@ def lineBot(op):
                 if text.lower() == 'คำสั่ง':
                     helpMessage = helpmessage()
                     line.sendMessage(to, str(helpMessage))
-                    line.sendContact(to, "u283825ccd9c7b996bbe31c312a80489c")
+                    line.sendContact(to, "u932a268262c0602c011a71c5ee2666b7")
                 elif text.lower() == 'คำสั่ง2':
                     helpTextToSpeech = helptexttospeech()
                     line.sendMessage(to, str(helpTextToSpeech))
@@ -477,15 +477,15 @@ def lineBot(op):
                 elif text.lower() == 'รีบอท':
                     line.sendMessage(to, "กดลิ้งใหม่....")
                     restartBot()
-                elif text.lower() == 'runtime':
+                elif text.lower() == 'ออน':
                     timeNow = time.time()
                     runtime = timeNow - botStart
                     runtime = format_timespan(runtime)
-                    line.sendMessage(to, "тнє вσт нαѕ вєєи яυииιиg {}".format(str(runtime)))
-                elif text.lower() == 'about':
+                    line.sendMessage(to, "🇹🇭⍣ᎢᎬᎪᎷᏴᎾᎢ⅌ᎷᎫ⍣🇹🇭 {}".format(str(runtime)))
+                elif text.lower() == 'ผส':
                     try:
                         arr = []
-                        owner = "u283825ccd9c7b996bbe31c312a80489c"
+                        owner = "u932a268262c0602c011a71c5ee2666b7"
                         creator = line.getContact(owner)
                         contact = line.getContact(lineMID)
                         grouplist = line.getGroupIdsJoined()
