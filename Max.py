@@ -204,10 +204,10 @@ def helpmessage():
                   "╠ CheckSticker「On/Off」" + "\n" + \
                   "╠ DetectMention「On/Off」" + "\n" + \
                   "╠══[ 📚คำสั่งเซล📚 ]" + "\n" + \
-                  "╠ Me" + "\n" + \
-                  "╠ MyMid" + "\n" + \
-                  "╠ MyName" + "\n" + \
-                  "╠ MyBio" + "\n" + \
+                  "╠ Me »คทของเรา" + "\n" + \
+                  "╠ Mid»ไอดีเรา" + "\n" + \
+                  "╠ ชื่อ »ชื่อของเรา" + "\n" + \
+                  "╠ ตัส »ตัสของเรา" + "\n" + \
                   "╠ MyPicture" + "\n" + \
                   "╠ MyVideoProfile" + "\n" + \
                   "╠ MyCover" + "\n" + \
@@ -563,14 +563,14 @@ def lineBot(op):
                 elif text.lower() == 'me':
                     sendMessageWithMention(to, lineMID)
                     line.sendContact(to, lineMID)
-                elif text.lower() == 'mymid':
-                    line.sendMessage(msg.to,"[MID]\n" +  lineMID)
-                elif text.lower() == 'myname':
+                elif text.lower() == 'mid':
+                    line.sendMessage(msg.to,"[MID ของคุณคือ..]\n" +  lineMID)
+                elif text.lower() == 'ชื่อ':
                     me = line.getContact(lineMID)
-                    line.sendMessage(msg.to,"[DisplayName]\n" + me.displayName)
-                elif text.lower() == 'mybio':
+                    line.sendMessage(msg.to,"[ชื่อที่แสดงของคุณ...]\n" + me.displayName)
+                elif text.lower() == 'ตัส':
                     me = line.getContact(lineMID)
-                    line.sendMessage(msg.to,"[StatusMessage]\n" + me.statusMessage)
+                    line.sendMessage(msg.to,"[สถานะตัสของคุณ...]\n" + me.statusMessage)
                 elif text.lower() == 'mypicture':
                     me = line.getContact(lineMID)
                     line.sendImageWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus)
