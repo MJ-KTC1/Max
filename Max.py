@@ -208,9 +208,9 @@ def helpmessage():
                   "╠ Mid»ไอดีเรา" + "\n" + \
                   "╠ ชื่อ »ชื่อของเรา" + "\n" + \
                   "╠ ตัส »ตัสของเรา" + "\n" + \
-                  "╠ MyPicture" + "\n" + \
-                  "╠ MyVideoProfile" + "\n" + \
-                  "╠ MyCover" + "\n" + \
+                  "╠ ดิส »รูปโปรของเรา" + "\n" + \
+                  "╠ ดิสวีดิโอ »วีดิโอโปรของเรา" + "\n" + \
+                  "╠ ปก »รูปปกของเรา" + "\n" + \
                   "╠ StealContact「Mention」" + "\n" + \
                   "╠ StealMid「Mention」" + "\n" + \
                   "╠ StealName「Mention」" + "\n" + \
@@ -571,13 +571,13 @@ def lineBot(op):
                 elif text.lower() == 'ตัส':
                     me = line.getContact(lineMID)
                     line.sendMessage(msg.to,"[สถานะตัสของคุณ...]\n" + me.statusMessage)
-                elif text.lower() == 'mypicture':
+                elif text.lower() == 'ดิส':
                     me = line.getContact(lineMID)
                     line.sendImageWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus)
-                elif text.lower() == 'myvideoprofile':
+                elif text.lower() == 'ดิสวีดิโอ':
                     me = line.getContact(lineMID)
                     line.sendVideoWithURL(msg.to,"http://dl.profile.line-cdn.net/" + me.pictureStatus + "/vp")
-                elif text.lower() == 'mycover':
+                elif text.lower() == 'ปก':
                     me = line.getContact(lineMID)
                     cover = line.getProfileCoverURL(lineMID)    
                     line.sendImageWithURL(msg.to, cover)
