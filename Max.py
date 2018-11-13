@@ -211,10 +211,10 @@ def helpmessage():
                   "╠ ดิส »รูปโปรของเรา" + "\n" + \
                   "╠ ดิสวีดิโอ »วีดิโอโปรของเรา" + "\n" + \
                   "╠ ปก »รูปปกของเรา" + "\n" + \
-                  "╠ StealContact「Mention」" + "\n" + \
-                  "╠ StealMid「Mention」" + "\n" + \
-                  "╠ StealName「Mention」" + "\n" + \
-                  "╠ StealBio「Mention」" + "\n" + \
+                  "╠ ทค @ »คทเพื่อน " + "\n" + \
+                  "╠ Mid @ »ไอดีเพื่อน" + "\n" + \
+                  "╠ ชื่อ @ »ชื่อของเพื่อน" + "\n" + \
+                  "╠ ตัส @ »ดึงตัสเพื่อน" + "\n" + \
                   "╠ StealPicture「Mention」" + "\n" + \
                   "╠ StealVideoProfile「Mention」" + "\n" + \
                   "╠ StealCover「Mention」" + "\n" + \
@@ -581,7 +581,7 @@ def lineBot(op):
                     me = line.getContact(lineMID)
                     cover = line.getProfileCoverURL(lineMID)    
                     line.sendImageWithURL(msg.to, cover)
-                elif msg.text.lower().startswith("stealcontact "):
+                elif msg.text.lower().startswith("คท "):
                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                         names = re.findall(r'@(\w+)', text)
                         mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -594,7 +594,7 @@ def lineBot(op):
                             contact = line.getContact(ls)
                             mi_d = contact.mid
                             line.sendContact(msg.to, mi_d)
-                elif msg.text.lower().startswith("stealmid "):
+                elif msg.text.lower().startswith("mid "):
                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                         names = re.findall(r'@(\w+)', text)
                         mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -607,7 +607,7 @@ def lineBot(op):
                         for ls in lists:
                             ret_ += "\n{}" + ls
                         line.sendMessage(msg.to, str(ret_))
-                elif msg.text.lower().startswith("stealname "):
+                elif msg.text.lower().startswith("ชื่อ "):
                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                         names = re.findall(r'@(\w+)', text)
                         mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -619,7 +619,7 @@ def lineBot(op):
                         for ls in lists:
                             contact = line.getContact(ls)
                             line.sendMessage(msg.to, "[ Display Name ]\n" + contact.displayName)
-                elif msg.text.lower().startswith("stealbio "):
+                elif msg.text.lower().startswith("ตัส "):
                     if 'MENTION' in msg.contentMetadata.keys()!= None:
                         names = re.findall(r'@(\w+)', text)
                         mention = ast.literal_eval(msg.contentMetadata['MENTION'])
